@@ -1,30 +1,31 @@
 call plug#begin()
 
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'morhetz/gruvbox'
 
 " Nerd*
 Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ryanoasis/vim-devicons'
 
 " Git
 Plug 'airblade/vim-gitgutter'
 Plug 'f-person/git-blame.nvim'
 
 " Fuzzy Finder
-Plug 'nvim-lua/popup.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
-Plug 'akinsho/nvim-toggleterm.lua'
 Plug 'rhysd/vim-clang-format'
 Plug 'mg979/vim-visual-multi'
-Plug 'oberblastmeister/termwrapper.nvim'
 Plug 'pacha/vem-tabline'
 Plug 'honza/vim-snippets'
 Plug 'dense-analysis/ale'
+Plug 'preservim/tagbar'
+Plug 'jiangmiao/auto-pairs'
+Plug 'caenrique/nvim-toggle-terminal'
 
 call plug#end()
 
@@ -34,6 +35,17 @@ let mapleader=','
 set number
 set tabstop=4
 set shiftwidth=4
+
+"
+" Toggle Terminal Settings
+"
+nnoremap <silent> <leader>t :ToggleTerminal<Enter>
+tnoremap <silent> <leader>t <C-\><C-n>:ToggleTerminal<Enter>
+
+"
+" TagBar Settins
+"
+nmap <F8> :TagbarToggle<CR>
 
 "
 " Vem Tabline
@@ -63,9 +75,24 @@ map <C-S> :NERDTreeFind<CR>
 
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
+let g:NERDTreeGitStatusUseNerdFonts = 1
+let g:NERDTreeGitStatusUntrackedFilesMode = 'all'
 
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeDirArrows = 1
+
+let g:NERDTreeGitStatusIndicatorMapCustom = {
+                \ 'Modified'  :'✹',
+                \ 'Staged'    :'✚',
+                \ 'Untracked' :'✭',
+                \ 'Renamed'   :'➜',
+                \ 'Unmerged'  :'═',
+                \ 'Deleted'   :'✖',
+                \ 'Dirty'     :'✗',
+                \ 'Ignored'   :'☒',
+                \ 'Clean'     :'✔︎',
+                \ 'Unknown'   :'?',
+                \ }
 
 "
 " NerdCommenter
@@ -73,19 +100,11 @@ let g:NERDTreeDirArrows = 1
 let g:NERDCreateDefaultMappings = 1
 
 "
-" ToggleTerm Settings
-"
-nnoremap <leader>t :ToggleTerm<CR>
-
-"
-" Telescope Settings
-" 	Find files using Telescope command-line sugar.
-"
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-nnoremap <leader>fl <cmd>Telescope git_files<cr>
+" Fuzzy Finder Settings
+nnoremap <leader>ff :Files<CR>
+nnoremap <leader>fgf :GFiles<CR> "Search in Git Files
+nnoremap <leader>fg :Rg<cr>
+nnoremap <leader>fb :Buffers<cr>
 
 "
 " CocSettings
