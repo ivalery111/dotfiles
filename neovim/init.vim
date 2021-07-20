@@ -2,7 +2,6 @@ call plug#begin()
 
 Plug 'vim-airline/vim-airline'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
-Plug 'morhetz/gruvbox'
 
 " Nerd*
 Plug 'preservim/nerdtree'
@@ -18,14 +17,22 @@ Plug 'f-person/git-blame.nvim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
+" Helpers
 Plug 'rhysd/vim-clang-format'
-Plug 'mg979/vim-visual-multi'
 Plug 'pacha/vem-tabline'
 Plug 'honza/vim-snippets'
 Plug 'dense-analysis/ale'
 Plug 'preservim/tagbar'
 Plug 'jiangmiao/auto-pairs'
 Plug 'caenrique/nvim-toggle-terminal'
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'vim-ctrlspace/vim-ctrlspace'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+
+" Color themes
+Plug 'danilo-augusto/vim-afterglow'
+Plug 'morhetz/gruvbox'
+Plug 'marko-cerovac/material.nvim'
 
 call plug#end()
 
@@ -35,6 +42,76 @@ let mapleader=','
 set number
 set tabstop=4
 set shiftwidth=4
+set nocompatible
+set hidden
+set encoding=utf-8
+autocmd FileType make setlocal noexpandtab
+
+" Gitgutter
+nmap ]h <Plug>(GitGutterNextHunk)
+nmap [h <Plug>(GitGutterPrevHunk)
+
+" Load the colorsheme
+colorscheme gruvbox
+
+" Disable arrow keys and page up / down
+noremap <Up> <nop>
+noremap <Down> <nop>
+noremap <Left> <nop>
+noremap <Right> <nop>
+inoremap <Up> <nop>
+inoremap <Down> <nop>
+inoremap <Left> <nop>
+inoremap <Right> <nop>
+vnoremap <Up> <nop>
+vnoremap <Down> <nop>
+vnoremap <Left> <nop>
+vnoremap <Right> <nop>
+noremap <PageUp> <nop>
+inoremap <PageUp> <nop>
+vnoremap <PageUp> <nop>
+noremap <PageDown> <nop>
+inoremap <PageDown> <nop>
+vnoremap <PageDown> <nop>
+
+"
+" Git-Blame
+"
+let g:gitblame_enabled = 0
+
+"
+" CtrlSpace
+"
+let g:CtrlSpaceDefaultMappingKey = "<C-space> "
+
+"
+" VIM Airline
+"
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+
+"
+" Display tabs and trailing spaces visually
+"
+if has('X11') || has('nvim')
+  set list listchars=tab:\ \ ,trail:· " strings to use in 'list' mode
+  set fillchars=vert:\│
+  let g:NERDTreeDirArrows=1
+else
+  set list listchars=tab:\ \ ,trail:. " strings to use in 'list' mode
+  set fillchars=vert:\|
+  let g:NERDTreeDirArrows=0
+endif
+
+"
+" VIM Highlight Settings
+"
+let g:cpp_class_scope_highlight     = 1
+let g:cpp_member_variable_highlight = 1
+let g:cpp_class_decl_highlight = 1
+let g:cpp_posix_standard = 1
+let g:cpp_experimental_template_highlight = 1
+let g:cpp_concepts_highlight = 1
 
 "
 " Toggle Terminal Settings
@@ -52,15 +129,6 @@ nmap <F8> :TagbarToggle<CR>
 "
 nmap <C-S-left> :bprevious<CR>
 nmap <C-S-right> :bnext<CR>
-
-"
-" VIM Visual Multi Settings
-"
-let g:VM_maps = {}
-let g:VM_maps['Find Under']                  = '<C-S-d>'
-let g:VM_maps['Find Subword Under']          = '<C-S-d>'
-let g:VM_maps["Add Cursor Down"]             = '<C-Down>'
-let g:VM_maps["Add Cursor Up"]               = '<C-Up>'
 
 "
 " VIM Clang Format Settings
