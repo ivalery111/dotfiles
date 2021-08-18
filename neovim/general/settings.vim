@@ -64,7 +64,7 @@ set autoindent
 set laststatus=0
 
 " Line numbers
-set number relativenumber
+set number
 
 " Highlight current line
 set cursorline
