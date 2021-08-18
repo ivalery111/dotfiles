@@ -45,17 +45,14 @@ set t_Co=256
 " More visible '`' character
 set conceallevel=0
 
-" 2 Spaces for TAB
-set tabstop=2
+" 4 Spaces for TAB
+set tabstop=4
 
-" 2 Spaces for indention
-set shiftwidth=2
+" 4 Spaces for indention
+set shiftwidth=4
 
 " Smart TAB's
 set smarttab
-
-" Convert TAB's to Spaces
-set expandtab
 
 " Smart indents
 set smartindent
@@ -105,9 +102,6 @@ set formatoptions-=cro
 
 " Shared clipboard
 set clipboard=unnamedplus
-
-" Spell check
-set spell spelllang=en_us,pl
 
 " Auto source while writing to init.vim
 au! BufWritePost $MYVIMRC source %
