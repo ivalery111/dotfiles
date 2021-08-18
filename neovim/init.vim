@@ -19,6 +19,7 @@ call plug#begin()
 	Plug 'morhetz/gruvbox'
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
+	Plug 'caenrique/nvim-toggle-terminal'
 call plug#end()
 
 "
@@ -31,3 +32,4 @@ source /home/valery/.config/nvim/nerdtree/nerdtree-commenter.vim
 source /home/valery/.config/nvim/vim-gitgutter/vim-gitgutter.vim
 source /home/valery/.config/nvim/gruvbox/gruvbox.vim
 source /home/valery/.config/nvim/fzf/fzf.vim
+source /home/valery/.config/nvim/toggle-terminal/toggle-terminal.vim
