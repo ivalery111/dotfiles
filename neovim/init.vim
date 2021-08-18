@@ -16,6 +16,7 @@ call plug#begin()
 	Plug 'preservim/nerdcommenter'
 	Plug 'ryanoasis/vim-devicons'
 	Plug 'airblade/vim-gitgutter'
+	Plug 'morhetz/gruvbox'
 call plug#end()
 
 "
@@ -26,3 +27,4 @@ source /home/valery/.config/nvim/nerdtree/nerdtree.vim
 source /home/valery/.config/nvim/nerdtree/nerdtree-git.vim
 source /home/valery/.config/nvim/nerdtree/nerdtree-commenter.vim
 source /home/valery/.config/nvim/vim-gitgutter/vim-gitgutter.vim
+source /home/valery/.config/nvim/gruvbox/gruvbox.vim
