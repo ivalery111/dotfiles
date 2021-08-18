@@ -2,8 +2,8 @@
 " Neovim configuration
 "
 
-source ./general/settings.vim
-source ./general/keys.vim
+source /home/valery/.config/nvim/general/settings.vim
+source /home/valery/.config/nvim/general/keys.vim
 
 "
 " Neovim extensions
@@ -16,4 +16,7 @@ call plug#end()
 "
 " Extensions configuration
 "
-source ./airline/airline.vim
+source /home/valery/.config/nvim/airline/airline.vim
+source /home/valery/.config/nvim/nerdtree/nerdtree.vim
+source /home/valery/.config/nvim/nerdtree/nerdtree-git.vim
+source /home/valery/.config/nvim/nerdtree/nerdtree-commenter.vim
