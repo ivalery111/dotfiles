@@ -30,8 +30,25 @@ set cmdheight=2
 " Treat dash separated words as a word text object
 set iskeyword+=-
 
-" Enable mouse
-set mouse=a
+" Disable arrow keys and page up / down
+noremap <Up> <nop>
+noremap <Down> <nop>
+noremap <Left> <nop>
+noremap <Right> <nop>
+inoremap <Up> <nop>
+inoremap <Down> <nop>
+inoremap <Left> <nop>
+inoremap <Right> <nop>
+vnoremap <Up> <nop>
+vnoremap <Down> <nop>
+vnoremap <Left> <nop>
+vnoremap <Right> <nop>
+noremap <PageUp> <nop>
+inoremap <PageUp> <nop>
+vnoremap <PageUp> <nop>
+noremap <PageDown> <nop>
+inoremap <PageDown> <nop>
+vnoremap <PageDown> <nop>
 
 " Horizontal splits on bottom
 set splitbelow
