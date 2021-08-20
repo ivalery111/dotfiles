@@ -21,6 +21,7 @@ call plug#begin()
 	Plug 'junegunn/fzf.vim'
 	Plug 'caenrique/nvim-toggle-terminal'
 	Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+	Plug 'vimwiki/vimwiki'
 call plug#end()
 
 "
@@ -36,3 +37,4 @@ source /home/valery/.config/nvim/fzf/fzf.vim
 source /home/valery/.config/nvim/toggle-terminal/toggle-terminal.vim
 source /home/valery/.config/nvim/coc/coc.vim
 source /home/valery/.config/nvim/coc/extensions.vim
+source /home/valery/.config/nvim/vimwiki/vimwiki.vim
