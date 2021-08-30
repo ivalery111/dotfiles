@@ -25,6 +25,7 @@ call plug#begin()
 	Plug 'preservim/nerdcommenter'
 	Plug 'ryanoasis/vim-devicons'
 	Plug 'airblade/vim-gitgutter'
+	Plug 'tpope/vim-fugitive'
 	Plug 'morhetz/gruvbox'
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
