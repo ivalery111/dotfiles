@@ -31,6 +31,8 @@ call plug#begin()
 	Plug 'caenrique/nvim-toggle-terminal'
 	Plug 'vimwiki/vimwiki'
 	Plug 'vim-ctrlspace/vim-ctrlspace'
+	Plug 'neovim/nvim-lspconfig'
+	Plug 'hrsh7th/nvim-compe'
 call plug#end()
 
 "
@@ -46,3 +48,6 @@ source /home/valery/.config/nvim/fzf/fzf.vim
 source /home/valery/.config/nvim/toggle-terminal/toggle-terminal.vim
 source /home/valery/.config/nvim/vimwiki/vimwiki.vim
 source /home/valery/.config/nvim/vim-ctrlspace/vim-ctrlspace.vim
+source /home/valery/.config/nvim/lsp/config.vim
+source /home/valery/.config/nvim/compe/config.lua
+source /home/valery/.config/nvim/lsp/python.lua
