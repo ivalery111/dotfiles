@@ -33,6 +33,7 @@ call plug#begin()
 	Plug 'vim-ctrlspace/vim-ctrlspace'
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'majutsushi/tagbar'
+	Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 "
