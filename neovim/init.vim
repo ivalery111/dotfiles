@@ -33,6 +33,7 @@ call plug#begin()
 	Plug 'vim-ctrlspace/vim-ctrlspace'
 	Plug 'neovim/nvim-lspconfig'
 	Plug 'hrsh7th/nvim-compe'
+	Plug 'majutsushi/tagbar'
 call plug#end()
 
 "
@@ -51,3 +52,4 @@ source /home/valery/.config/nvim/vim-ctrlspace/vim-ctrlspace.vim
 source /home/valery/.config/nvim/lsp/config.vim
 source /home/valery/.config/nvim/compe/config.lua
 source /home/valery/.config/nvim/lsp/python.lua
+source /home/valery/.config/nvim/tagbar/tagbar.vim
