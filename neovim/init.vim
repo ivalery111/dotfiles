@@ -36,6 +36,7 @@ call plug#begin()
 	Plug 'majutsushi/tagbar'
 	Plug 'jiangmiao/auto-pairs'
 	Plug 'mhinz/vim-startify'
+	Plug 'zivyangll/git-blame.vim'
 call plug#end()
 
 "
@@ -54,3 +55,4 @@ source /home/valery/.config/nvim/vim-ctrlspace/vim-ctrlspace.vim
 source /home/valery/.config/nvim/tagbar/tagbar.vim
 source /home/valery/.config/nvim/coc/coc.vim
 source /home/valery/.config/nvim/coc/extensions.vim
+source /home/valery/.config/nvim/git-blame/git-blame.vim
