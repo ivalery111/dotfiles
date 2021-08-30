@@ -20,7 +20,6 @@ call plug#begin()
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
 	Plug 'caenrique/nvim-toggle-terminal'
-	Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 	Plug 'vimwiki/vimwiki'
 	Plug 'vim-ctrlspace/vim-ctrlspace'
 call plug#end()
@@ -36,7 +35,5 @@ source /home/valery/.config/nvim/vim-gitgutter/vim-gitgutter.vim
 source /home/valery/.config/nvim/gruvbox/gruvbox.vim
 source /home/valery/.config/nvim/fzf/fzf.vim
 source /home/valery/.config/nvim/toggle-terminal/toggle-terminal.vim
-source /home/valery/.config/nvim/coc/coc.vim
-source /home/valery/.config/nvim/coc/extensions.vim
 source /home/valery/.config/nvim/vimwiki/vimwiki.vim
 source /home/valery/.config/nvim/vim-ctrlspace/vim-ctrlspace.vim
